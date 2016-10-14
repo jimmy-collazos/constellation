@@ -1,0 +1,15 @@
+---
+# ejercicio para montar una red con multiples maquinas "App" y una correcta
+# configuración del NGINX para que pueda resolver adecuadamente
+# ver:
+# - https://www.youtube.com/watch?v=HJ9bECmuwKo
+version: '2'
+
+services:
+  app:
+    build: app
+
+  proxy:
+    build: proxy
+    ports:
+      - "80:80"
